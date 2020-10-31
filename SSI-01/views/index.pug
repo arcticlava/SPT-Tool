@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  h1 My Healthcare Portals
+  .zoomin
+    img#dr1(src='../images/drweil.png' title='Andrew Weil MD')
+    img#dr2(src='../images/drgupta.png' title='Sanjay Gupta MD')
+    img#dr3(src='../images/drfauci.png' title='Anthony Fauci MD')
+    img#dr4(src='../images/drhouse.png' title='Gregory House MD')
+    img#dr5(src='../images/droz.png' title='Mehmet Oz MD')
+  br
+  .zoomin
+    img#portal1(src='../images/epic.png' title='Andrew Weil MD')
+    img#portal2(src='../images/allscripts.png' title='Sanjay Gupta MD')
+    img#portal3(src='../images/cerner.png' title='Anthony Fauci MD')
+    img#portal4(src='../images/athena.png' title='Gregory House MD')
+    img#portal5(src='../images/nextgen.png' title='Mehmet Oz MD')
+  p #{description} (#{symbol})
+  p The current blockheight is: #{block}
+  p The most recent hash is:
+  p #{hash}
+  p The current timestamp is:
+  p #{t_stamp} #{n_date}
+  button#usdt Send USDT
+  button#usdc Send USDC
+  button#busd Send BUSD
+  button#dai Send DAI
+  button#yeth Send yETH
+  button#wbtc Send wBTC
+  button#bat Send BAT
+  #myModal.modal
+    .modal-content
+      .modal-header
+        span.close &times;
+        .zoomin
+          img#dr1(src='../images/drweil.png' title='Andrew Weil MD')
+        h2 Medical Permissions Control Panel for: Andrew Weil MD
+      .modal-body
+        .zoomin
+          img#portal2(src='../images/allscripts.png' title='Sanjay Gupta MD')
+          img#portal3(src='../images/cerner.png' title='Anthony Fauci MD')
+          img#portal4(src='../images/athena.png' title='Gregory House MD')
+          img#portal5(src='../images/nextgen.png' title='Mehmet Oz MD')
+        p
+        label.switch
+          input(type='checkbox')
+          span.slider.round
+        label.switch
+          input(type='checkbox')
+          span.slider.round
+        label.switch
+          input(type='checkbox')
+          span.slider.round
+        label.switch
+          input(type='checkbox')
+          span.slider.round
+        p Click the slider buttons to select which portals will be granted.
+        p Red indicates provider does not have permission for access.
+        p Green indicates provider will be granted permissions when window is closed. 
+      .modal-footer
+        h3 Powered by Syscoin Platform Token: MSSI
+  script(language='Javascript', src='../javascripts/modal.js')
